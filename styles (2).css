@@ -1,0 +1,114 @@
+/* Responsive layout based on the original mt-guide1-main styles.css. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Keep the top text block and three lower blocks the same width
+   on large screens, instead of stretching to the full browser width. */
+header,
+main {
+    width: 100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header,
+.column {
+    border: 1px dashed #cccccc;
+    padding: 10px;
+}
+
+header {
+    margin-bottom: 8px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+header p {
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+/* Smaller than 576px: Block 1 -> 2 -> 3 -> 4 (four vertical rows). */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.column {
+    min-width: 0;
+    text-align: center;
+}
+
+.column h2 {
+    margin: 0 0 8px;
+}
+
+.column img {
+    display: block;
+    height: 150px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.column p {
+    margin: 4px 0;
+}
+
+/* Left align form fields, center its heading. */
+.column:nth-child(3) {
+    text-align: left;
+}
+
+.column:nth-child(3) h2 {
+    text-align: center;
+}
+
+.column form p {
+    margin: 6px 0;
+}
+
+.column input {
+    width: 90px;
+    max-width: 60%;
+}
+
+.column button {
+    cursor: pointer;
+}
+
+/* Original exam breakpoint: Block 1 on top, Blocks 2/3/4 side-by-side. */
+@media screen and (min-width: 576px) {
+    main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* --- Small additions for accessible form fields and the exam practice pack --- */
+.column label { display: inline-block; min-width: 60px; }
+.column form p { display: flex; gap: 6px; align-items: center; }
+.column input { min-width: 0; width: 96px; }
+.column select { max-width: 100%; }
+.column button { background: #087d95; color: white; border: 1px solid #07657b; padding: 5px 10px; }
+.column button:hover { background: #06667b; }
+#result { min-height: 20px; }
+#result.error { color: #9b1c1c; }
+@media (min-width: 576px) and (max-width: 710px) {
+    .column { padding: 7px; }
+    .column form p { display:block; }
+    .column label { margin-bottom: 3px; }
+}

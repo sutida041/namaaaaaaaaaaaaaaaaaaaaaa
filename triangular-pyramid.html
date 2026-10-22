@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangular Pyramid - Volume Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Block 1: same header structure as the teacher's cylinder.html -->
+<header>
+    <h1>Triangular Pyramid</h1>
+    <p>A triangular pyramid (tetrahedron) has a triangular base and three triangular side faces meeting at one vertex.</p>
+    <p>Calculate the base triangle area (b × h ÷ 2), multiply by the pyramid height (H), then divide by three. These two heights are different.</p>
+</header>
+
+<main>
+    <!-- Block 2: local image with relative path -->
+    <div class="column">
+        <img src="asset/example.svg" height="150" alt="Triangular Pyramid example">
+        <p>Triangular Pyramid shape</p>
+        <p>Source: <a href="asset/example.svg" target="_blank">Local SVG illustration</a></p>
+    </div>
+
+    <!-- Block 3: local diagram with relative path -->
+    <div class="column">
+        <h2>Triangular Pyramid Volume</h2>
+        <img src="asset/geometry.svg" height="150" alt="Triangular Pyramid volume diagram">
+    </div>
+
+    <!-- Block 4: submit form + space for JavaScript output -->
+    <div class="column">
+        <h2>Volume Calculator</h2>
+        <form id="volumeCalculator">
+            <p><label for="inBase">Triangle base:</label>
+            <input type="number" id="inBase" step="any" min="0" value="6" required></p>
+            <p><label for="inTriangleHeight">Triangle height:</label>
+            <input type="number" id="inTriangleHeight" step="any" min="0" value="4" required></p>
+            <p><label for="inHeight">Pyramid height:</label>
+            <input type="number" id="inHeight" step="any" min="0" value="10" required></p>
+            <p><label for="inUnit">Unit:</label>
+            <select id="inUnit">
+                <option value="1">cm</option>
+                <option value="1000">mm</option>
+            </select></p>
+            <p><button type="submit">Calculate</button></p>
+        </form>
+        <p id="result" aria-live="polite"></p>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangular Prism - Volume Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Block 1: same header structure as the teacher's cylinder.html -->
+<header>
+    <h1>Triangular Prism</h1>
+    <p>A triangular prism has two parallel triangular faces linked by rectangular side faces. A triangular tent is an example.</p>
+    <p>First calculate the triangle area (base × triangle height ÷ 2). Then multiply by the prism length. The triangle height is measured perpendicular to its base.</p>
+</header>
+
+<main>
+    <!-- Block 2: local image with relative path -->
+    <div class="column">
+        <img src="asset/example.svg" height="150" alt="Triangular Prism example">
+        <p>Triangular Prism shape</p>
+        <p>Source: <a href="asset/example.svg" target="_blank">Local SVG illustration</a></p>
+    </div>
+
+    <!-- Block 3: local diagram with relative path -->
+    <div class="column">
+        <h2>Triangular Prism Volume</h2>
+        <img src="asset/geometry.svg" height="150" alt="Triangular Prism volume diagram">
+    </div>
+
+    <!-- Block 4: submit form + space for JavaScript output -->
+    <div class="column">
+        <h2>Volume Calculator</h2>
+        <form id="volumeCalculator">
+            <p><label for="inBase">Triangle base:</label>
+            <input type="number" id="inBase" step="any" min="0" value="6" required></p>
+            <p><label for="inTriangleHeight">Triangle height:</label>
+            <input type="number" id="inTriangleHeight" step="any" min="0" value="4" required></p>
+            <p><label for="inLength">Prism length:</label>
+            <input type="number" id="inLength" step="any" min="0" value="10" required></p>
+            <p><label for="inUnit">Unit:</label>
+            <select id="inUnit">
+                <option value="1">cm</option>
+                <option value="1000">mm</option>
+            </select></p>
+            <p><button type="submit">Calculate</button></p>
+        </form>
+        <p id="result" aria-live="polite"></p>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

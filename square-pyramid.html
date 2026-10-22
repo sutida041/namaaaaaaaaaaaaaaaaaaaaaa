@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Pyramid - Volume Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Block 1: same header structure as the teacher's cylinder.html -->
+<header>
+    <h1>Square Pyramid</h1>
+    <p>A square pyramid has a square base and four triangular sides meeting at one point.</p>
+    <p>Find the square base area a², multiply by the vertical height (h), then divide by three. The height is perpendicular to the base, not the slant height.</p>
+</header>
+
+<main>
+    <!-- Block 2: local image with relative path -->
+    <div class="column">
+        <img src="asset/example.svg" height="150" alt="Square Pyramid example">
+        <p>Square Pyramid shape</p>
+        <p>Source: <a href="asset/example.svg" target="_blank">Local SVG illustration</a></p>
+    </div>
+
+    <!-- Block 3: local diagram with relative path -->
+    <div class="column">
+        <h2>Square Pyramid Volume</h2>
+        <img src="asset/geometry.svg" height="150" alt="Square Pyramid volume diagram">
+    </div>
+
+    <!-- Block 4: submit form + space for JavaScript output -->
+    <div class="column">
+        <h2>Volume Calculator</h2>
+        <form id="volumeCalculator">
+            <p><label for="inSide">Base side:</label>
+            <input type="number" id="inSide" step="any" min="0" value="6" required></p>
+            <p><label for="inHeight">Height:</label>
+            <input type="number" id="inHeight" step="any" min="0" value="10" required></p>
+            <p><label for="inUnit">Unit:</label>
+            <select id="inUnit">
+                <option value="1">cm</option>
+                <option value="1000">mm</option>
+            </select></p>
+            <p><button type="submit">Calculate</button></p>
+        </form>
+        <p id="result" aria-live="polite"></p>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangular Prism - Volume Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Block 1: same header structure as the teacher's cylinder.html -->
+<header>
+    <h1>Rectangular Prism</h1>
+    <p>A rectangular prism (cuboid) has six rectangular faces. A parcel box or brick is an everyday example.</p>
+    <p>Multiply the length (l), width (w), and height (h) to find its volume. All three dimensions must use the same unit.</p>
+</header>
+
+<main>
+    <!-- Block 2: local image with relative path -->
+    <div class="column">
+        <img src="asset/example.svg" height="150" alt="Rectangular Prism example">
+        <p>Rectangular Prism shape</p>
+        <p>Source: <a href="asset/example.svg" target="_blank">Local SVG illustration</a></p>
+    </div>
+
+    <!-- Block 3: local diagram with relative path -->
+    <div class="column">
+        <h2>Rectangular Prism Volume</h2>
+        <img src="asset/geometry.svg" height="150" alt="Rectangular Prism volume diagram">
+    </div>
+
+    <!-- Block 4: submit form + space for JavaScript output -->
+    <div class="column">
+        <h2>Volume Calculator</h2>
+        <form id="volumeCalculator">
+            <p><label for="inLength">Length:</label>
+            <input type="number" id="inLength" step="any" min="0" value="5" required></p>
+            <p><label for="inWidth">Width:</label>
+            <input type="number" id="inWidth" step="any" min="0" value="4" required></p>
+            <p><label for="inHeight">Height:</label>
+            <input type="number" id="inHeight" step="any" min="0" value="10" required></p>
+            <p><label for="inUnit">Unit:</label>
+            <select id="inUnit">
+                <option value="1">cm</option>
+                <option value="1000">mm</option>
+            </select></p>
+            <p><button type="submit">Calculate</button></p>
+        </form>
+        <p id="result" aria-live="polite"></p>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
